@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary   fixed-top">
+  <a class="navbar-brand" href="#">VidJot</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    {{#if user}}
+
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ideas">Ideas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+
+      <li class="nav-item active" style="position: absolute;right: 10px;">
+        <a class="nav-link" href="/users/logout">Log out</a>
+      </li>
+    </ul>
+    {{else}}
+    <ul class="navbar-nav   justify-content-end" style="    position: absolute;right: 25px;">
+
+      <li class="  dropdown">
+        <a class="nav-link dropdown-toggle" href="/users/login" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+          <a class="dropdown-item" href="/users/login">Login</a>
+          <a class="dropdown-item" href="/users/register">Register</a>
+
+        </div>
+      </li>
+
+
+    </ul>
+
+    {{/if}}
+  </div>
+</nav>

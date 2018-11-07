@@ -1,0 +1,49 @@
+<div class="col-sm-12 mr-3">
+  
+<a href="/ideas/add" class="pull-right btn btn-primary" style="float:right;margin:20px">Add new idea</a>
+
+</div>
+<div class="card card-body col-sm-12">
+  <h5 class="card-title">List of ideas </h5>
+  <div class="">
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Idea</th>
+          <th scope="col">Details</th> 
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each ideas}}
+        <tr>
+          <th scope="row"> </th>
+          <td>{{title}}</td>
+          <td>{{details}}</td> 
+          <td>
+            <a href="/ideas/edit/{{id}}" class="btn btn-dark btn-small  btn-block">Edit</a>
+
+
+          </td>
+          <td>
+
+            <form method="post" action="/ideas/delete/{{id}}?_method=DELETE">
+              <input type="hidden" name="_method" value="DELETE" />
+              <input class="btn btn-danger btn-small btn-block" type="submit" value="Delete" />
+
+            </form>
+          </td>
+        </tr>
+        {{else}}
+        no video ideas
+        {{/each}}
+
+
+      </tbody>
+    </table>
+  </div>
+</div>

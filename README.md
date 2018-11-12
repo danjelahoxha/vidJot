@@ -1,4 +1,4 @@
 # vidJot
-Simple crud aplication in node js
-this application is  my first aplication in node js 
-it can serve to all beginners in node to learn or practise 
+Simple crud aplication in node js.
+This application is  my first aplication in node.
+It can be a help  to all beginners  to learn or practise.
